@@ -30737,8 +30737,8 @@ function bindPopup(l) {
                     '<tr><td>Yards</td><td>' + (total / 0.9144).toFixed(2) + '</td></tr>' +
                     '<tr><td>Miles</td><td>' + (total / 1609.34).toFixed(2) + '</td></tr>';
         } else if (l.feature.geometry.type === 'Point') {
-            info += '<tr><td>Latitude </td><td>' + l.feature.geometry.coordinates[1].toFixed(4) + '</td></tr>' +
-                    '<tr><td>Longitude</td><td>' + l.feature.geometry.coordinates[0].toFixed(4) + '</td></tr>';
+            info += '<tr><td>Latitude </td><td>' + l.feature.geometry.coordinates[1].toFixed(8) + '</td></tr>' +
+                    '<tr><td>Longitude</td><td>' + l.feature.geometry.coordinates[0].toFixed(8) + '</td></tr>';
         } else if (l.feature.geometry.type === 'Polygon') {
           info += '<tr><td>Sq. Meters</td><td>' + (LGeo.area(l)).toFixed(2) + '</td></tr>' +
                   '<tr><td>Sq. Kilometers</td><td>' + (LGeo.area(l) / 1000000).toFixed(2) + '</td></tr>' +
